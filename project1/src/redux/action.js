@@ -3,7 +3,7 @@ import { GET_ALL_DATA, GET_ALL_DATA_FAIL, POST_DATA_FAIL, UPDATE_STATUS_SUCCESS 
 
 export const getdata =()=> async(dispatch)=>{
 try {
-    const response=await axios.get('http://localhost:5000/todo');
+    const response=await axios.get('https://my-new-server.onrender.com/todo');
     
     dispatch({type:GET_ALL_DATA,payload:response.data})
 } catch (err) {
@@ -13,7 +13,7 @@ try {
 
 export const updtaeData =(id,status)=> async(dispatch)=>{
     try {
-       await axios.patch(`http://localhost:5000/todo/${id}`,{status:status});
+       await axios.patch(`https://my-new-server.onrender.com/${id}`,{status:status});
         
         dispatch({type:UPDATE_STATUS_SUCCESS})
     } catch (err) {
@@ -23,7 +23,7 @@ export const updtaeData =(id,status)=> async(dispatch)=>{
 
 export const postData=(post)=> async(dispatch)=>{
     try{
-        await axios.post(`http://localhost:5000/todo`,post)
+        await axios.post(`https://my-new-server.onrender.com/todo`,post)
     }catch(err){
         dispatch({type:POST_DATA_FAIL,payload:err.message})
     }
