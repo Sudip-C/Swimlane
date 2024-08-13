@@ -1,0 +1,25 @@
+.App{
+font-family: 'Courier New', Courier, monospace;
+background-color: antiquewhite;
+
+}
+.container{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: antiquewhite;
+}
+.App .inputBox{
+padding: 10px;
+border-radius: 10px;
+margin: 20px;
+}
+button{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  margin: 10px;
+}
