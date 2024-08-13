@@ -39,7 +39,7 @@ const handleClick=(e)=>{
         status:"todo"
       }
 dispatch(postData(obj))
-dispatch(getdata())
+.then(()=>dispatch(getdata()))
 setInput("")
 }
 
