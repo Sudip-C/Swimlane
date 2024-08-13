@@ -13,7 +13,7 @@ try {
 
 export const updtaeData =(id,status)=> async(dispatch)=>{
     try {
-       await axios.patch(`https://my-new-server.onrender.com/${id}`,{status:status});
+       await axios.patch(`https://my-new-server.onrender.com/todo/${id}`,{status:status});
         
         dispatch({type:UPDATE_STATUS_SUCCESS})
     } catch (err) {

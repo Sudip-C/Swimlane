@@ -28,7 +28,7 @@ updatedTask.splice(position,0,{
 })
 setTask(updatedTask)
 dispatch(updtaeData(taskMove.id,status))
-dispatch(getdata())
+.then(()=>dispatch(getdata()))
 }
 
 const handleClick=(e)=>{
